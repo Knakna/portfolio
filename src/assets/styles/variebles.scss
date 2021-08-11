@@ -1,0 +1,110 @@
+
+$textColor: #2D2E46;
+$primaryLight: #9affff;
+$primaryDark: #00bfcc;
+
+$primaryBG: #5ef2ff;
+
+
+$bgWhite: #F9F9FE;
+
+
+$br: 8px;
+$brBtn: 30px;
+
+
+//template variables
+
+
+%container {
+  max-width: 1030px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: 574.8px) {
+    padding: 0 5px;
+  }
+}
+
+//@extend %ff600;
+
+
+//BTNS
+//
+//%btn {
+//  min-height: 35px;
+//  width: 100%;
+//  max-width: 185px;
+//
+//  padding: 10px;
+//
+//  @extend %sf500;
+//  font-size: 16px;
+//  line-height: 1.2;
+//  letter-spacing: 0.01em;
+  //color: $textLight;
+
+  //background-color: $accent;
+  //box-shadow: 0 4px 18px rgba(33, 38, 143, .35),
+  //inset 0 1px 0 rgba(255, 255, 255, .3);
+  //border-radius: $brBtn;
+  //border: none;
+  //cursor: pointer;
+  //
+  //transition: .2s;
+  //
+  //&:hover {
+  //  background-color: lighten($accent, 5%);
+  //}
+  //
+  //&:active {
+  //  background-color: darken($accent, 5%);
+  //}
+  //
+  //&:focus {
+  //  outline: none;
+  //}
+  //}
+
+
+
+//LINKS
+//
+//%linkTry {
+//  font-size: 16px;
+//  @extend %sf600;
+//  color: $accent;
+//
+//  &:hover {
+//    text-decoration: underline;
+//    color: lighten($accent, 10%);
+//  }
+//
+//  &:active {
+//    color: darken($accent, 10%);
+//  }
+//}
+
+// Breakpoints
+
+//             @include media(sm) {    }
+
+$breakpoints: (
+        xs: 574.8px,
+        sm: 766.8px,
+        md: 990.8px,
+        lg: 1080.8px,
+        xl: 1199.8px,
+);
+
+// @media (max-width: 630px) {
+//   width: 240px;
+// }
+
+
+//modal
+
+
+
+

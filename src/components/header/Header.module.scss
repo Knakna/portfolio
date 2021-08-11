@@ -1,0 +1,12 @@
+@import "./src/assets/styles/mixins";
+@import "./src/assets/styles/variebles";
+
+.header {
+  min-height: 60px;
+
+  background-color: $primaryDark;
+}
+//
+//.container {
+//  @extend %container;
+//}

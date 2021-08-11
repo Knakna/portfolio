@@ -23,8 +23,8 @@ const headerItems = [
 
 export function Header() {
     return (
-        <header id={"mainId"} className={s.headerBlock}>
-            <div className={s.headerContainer}>
+        <header id={"mainId"} className={s.header}>
+            <div className={s.container}>
                 <div className={s.header}>
                     {headerItems.map((item, index) => {
                         return (

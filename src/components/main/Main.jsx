@@ -6,19 +6,23 @@ export const Main = () => {
     return (
         <div className={s.main} id={'main'}>
             <div className={s.container}>
-                <div className={s.greeting}>
-                    <p>Hi!</p>
-                    <div className={s.name}>
-                        <p>My name is</p>
-                        <span>Natallia</span><span>Kulikova</span>
+                <div className={s.wrap}>
+                    <div className={s.inner}>
+                        <div className={s.content}>
+                            <span className={s.greeting}>Hi! My name is</span>
+                            <h1 className={s.name}>Natallia Kulikova</h1>
+
+                            <span className={s.career}>I am HTML/CSS developer</span>
+                        </div>
+                        <div className={s.photo}>
+                            <img className={s.myPhoto}
+                                 src={photo}
+                                 alt='myPhoto'/>
+                        </div>
                     </div>
-                    <h1>I am HTML/CSS developer</h1>
                 </div>
-                <div className={s.photo}>
-                    <img className={s.myPhoto}
-                         src={photo}
-                         alt='myPhoto'/>
-                </div>
+
+
             </div>
         </div>
     );

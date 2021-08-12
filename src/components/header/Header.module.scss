@@ -4,9 +4,63 @@
 .header {
   min-height: 60px;
 
-  background-color: $primaryDark;
+  background-color: $textColor;
 }
-//
-//.container {
-//  @extend %container;
-//}
+
+.container {
+  @extend %container;
+}
+
+.inner {
+  @include flex(row, center, flex-end);
+}
+
+.nav {
+  @include flex();
+
+  padding: 20px 0;
+
+  width: 45%;
+
+  @include media(xl) {
+    width: 100%;
+  }
+
+  @include media(xs) {
+    display: none;
+  }
+}
+
+.link {
+  font-size: 30px;
+  font-weight: 700;
+  color: $primaryLight;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    color: $bgWhite;
+  }
+
+  @include media(xl) {
+    font-size: 24px;
+  }
+}
+
+.burger {
+  display: none;
+
+  width: 50px;
+  height: 50px;
+
+  background-image: url(./../../assets/images/header/burgerIcon.svg);
+  fill: $primaryLight;
+
+  @include media(xs) {
+    display: block;
+  }
+  & .active {
+    background-image: url(./../../assets/images/header/crossIcon.svg);
+  }
+}
+

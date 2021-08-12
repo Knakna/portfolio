@@ -1,9 +1,10 @@
 
-$textColor: #2D2E46;
+$textColor: #000;
 $primaryLight: #9affff;
 $primaryDark: #00bfcc;
 
-$primaryBG: #5ef2ff;
+$primary: #5ef2ff;
+$primaryBg: #c3d1da;
 
 
 $bgWhite: #F9F9FE;
@@ -17,8 +18,7 @@ $brBtn: 30px;
 
 
 %container {
-  max-width: 1030px;
-  width: 100%;
+  max-width: 1310px;
   padding: 0 15px;
   margin: 0 auto;
 

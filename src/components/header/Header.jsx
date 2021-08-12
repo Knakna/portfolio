@@ -25,14 +25,23 @@ export function Header() {
     return (
         <header id={"mainId"} className={s.header}>
             <div className={s.container}>
-                <div className={s.header}>
-                    {headerItems.map((item, index) => {
-                        return (
-                            <Link key={index} activeClass="active" to={item.path} spy={true} smooth={true} duration={500}
-                                  className={s.link} onClick={() => scroll.scrollToTop()}>{item.title}</Link>
-                        )
-                    })}
+                <div className={s.inner}>
+                    <div className={s.nav}>
+                        {headerItems.map((item, index) => {
+                            return (
+                                <Link key={index} activeClass="active" to={item.path} spy={true} smooth={true}
+                                      duration={500}
+                                      className={s.link} onClick={() => scroll.scrollToTop()}>{item.title}</Link>
+                            )
+                        })}
+                    </div>
+
+                    <div className={s.burger}>
+
+                    </div>
+
                 </div>
+
             </div>
         </header>
     )

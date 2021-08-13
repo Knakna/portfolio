@@ -1,12 +1,13 @@
 import React from 'react';
-import styles from './Skills.module.scss';
+import s from './Skills.module.scss';
 import {Skill} from "./Skill/Skill";
+import icon from "../../assets/images/skills/svg/html5.svg"
 // import {Fade} from "react-reveal";
 
 const skils = [
     {
         title: "HTML5",
-        icon: ""
+        icon: "{src=icon}"
     },
     {
         title: "CSS3",
@@ -33,18 +34,21 @@ const skils = [
 
 export const Skills = () => {
     return (
-        <div className={styles.skills} id={'skills'}>
-            <div className={styles.container}>
-                {/*<Fade clear>*/}
-                    <h3>Skills</h3>
-                    <div className={styles.mySkills}>
+        <div className={s.skills} id={'skills'}>
+            <div className={s.container}>
+                <div className={s.inner}>
+                    {/*<Fade clear>*/}
+                    <h2 className={s.title}>Skills</h2>
+                    <div className={s.mySkills}>
                         {skils.map((skill, index) => {
                             return (
                                 <Skill key={index} skill={skill.title} icon={skill.icon}/>
                             )
                         })}
                     </div>
-                {/*</Fade>*/}
+                    {/*</Fade>*/}
+                </div>
+
             </div>
         </div>
     );

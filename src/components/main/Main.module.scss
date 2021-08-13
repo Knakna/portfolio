@@ -14,28 +14,85 @@
 .wrap {
   @include flex();
   height: 100%;
+
+  @include media(xl) {
+    align-items: flex-start;
+
+    margin-top: 80px;
+  }
+
+  @include media(xs) {
+    margin-top: 50px;
+  }
 }
 
 .inner {
   @include flex();
 
   width: 100%;
+
+  @include media(xl) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .content {
-  max-width: 600px;
+  margin: 0 30px 0 0;
 
   font-size: 40px;
   font-weight: 700;
   color: $bgWhite;
+
+  @include media(xl) {
+    margin-bottom: 70px;
+
+    font-size: 35px;
+    text-align: center;
+  }
+
+  @include media(xs) {
+    margin-bottom: 40px;
+
+    font-size: 25px;
+    line-height: 1.3;
+  }
 }
 
 .name {
+  margin: 5px 0;
+
+  position: relative;
+
   color: $primaryDark;
+  line-height: 1.1;
+
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: -10px;
+    left: 50%;
+    width: 100%;
+    height: 4px;
+    background-color: #1fc9c5;
+    transform: translate(-50%, 50%);
+
+     @media (max-width: 677px) {
+       display: none;
+     }
+  }
 }
 
 .career {
   font-size: 35px;
+
+  @include media(xl) {
+    font-size: 25px;
+  }
+
+  @include media(xs) {
+    font-size: 20px;
+  }
 }
 
 .photo {
@@ -45,8 +102,16 @@
   border: 4px solid #1fc9c5;
   border-radius: 30px;
   overflow: hidden;
+
+  @include media(xs) {
+    width: 200px;
+    height: 300px;
+  }
 }
 
 .myPhoto {
-  object-position: -110px;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 }

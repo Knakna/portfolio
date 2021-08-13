@@ -1,0 +1,17 @@
+@import "./src/assets/styles/mixins";
+@import "./src/assets/styles/variebles";
+
+
+.skills {
+  background-color: $primaryDark;
+}
+
+.container {
+  @extend %container;
+}
+
+.title {
+  font-size: 35px;
+  text-align: center;
+
+}

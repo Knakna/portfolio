@@ -1,13 +1,13 @@
 import React from 'react';
 import s from './Skills.module.scss';
-import {Skill} from "./Skill/Skill";
-import icon from "../../assets/images/skills/svg/html5.svg"
+import {Skill} from "./skill/Skill";
+import icon1 from "../../assets/images/skills/svg/html5.svg"
 // import {Fade} from "react-reveal";
 
 const skils = [
     {
         title: "HTML5",
-        icon: "{src=icon}"
+        icon: icon1
     },
     {
         title: "CSS3",

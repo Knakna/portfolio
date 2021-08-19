@@ -5,15 +5,17 @@ import s from './Skill.module.scss';
 export const Skill = ({skill, icon}) => {
     return (
         // <Fade cliar>
-            <div className={s.skillWrapper}>
-                <div className={s.skill}>
+            <div className={s.slill}>
+                <div className={s.inner}>
                     <div className={s.iconBox}>
                         <img className={s.icon} src={icon} alt='icon'/>
                     </div>
-                    <div className={s.title}>
-                        <h3>{skill}</h3>
-                    </div>
+                    {/*<div className={s.title}>*/}
+
+                    {/*</div>*/}
+
                 </div>
+                <h3 className={s.title}>{skill}</h3>
             </div>
         // </Fade>
     );

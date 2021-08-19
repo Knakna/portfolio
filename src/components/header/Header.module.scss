@@ -2,9 +2,14 @@
 @import "./src/assets/styles/variebles";
 
 .header {
-  min-height: 60px;
+  padding: 20px 0;
 
-  background-color: $textColor;
+  background-color: $primaryDark;
+
+  @include media(xl) {
+    padding: 10px 0;
+
+  }
 }
 
 .container {
@@ -18,7 +23,7 @@
 .nav {
   @include flex();
 
-  padding: 20px 0;
+  //padding: 20px 0;
 
   width: 45%;
 
@@ -34,12 +39,12 @@
 .link {
   font-size: 30px;
   font-weight: 700;
-  color: $primaryLight;
+  color: #fff;
   cursor: pointer;
   transition: .3s;
 
   &:hover {
-    color: $bgWhite;
+    color: $primaryLight;
   }
 
   @include media(xl) {

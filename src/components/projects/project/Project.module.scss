@@ -1,0 +1,27 @@
+@import "./src/assets/styles/mixins";
+@import "./src/assets/styles/variebles";
+
+
+.project {
+  @include flex(row, center, center);
+  max-width: 300px;
+  height: 200px;
+}
+//
+//.inner {
+//  @include flex(row, center, center);
+//  max-width: 300px;
+//  height: 200px;
+//
+//  margin-bottom: 30px;
+//
+//  background-color: #fff;
+//  box-shadow: 0 4px 18px rgba(33, 38, 143, .35),
+//  inset 0 1px 0 rgba(255, 255, 255, .3);
+//
+//}
+
+.icon {
+  width: 100%;
+  height: auto;
+}

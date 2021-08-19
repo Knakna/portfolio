@@ -1,33 +1,89 @@
 import React from 'react';
 import s from './Skills.module.scss';
 import {Skill} from "./skill/Skill";
-import icon1 from "../../assets/images/skills/svg/html5.svg"
+import iconHtml from "../../assets/images/skills/html.svg"
+import iconCss from "../../assets/images/skills/css3.svg";
+import iconSaas from "../../assets/images/skills/saas.svg";
+import iconLess from "../../assets/images/skills/less.svg";
+import iconGulp from "../../assets/images/skills/gulp.svg";
+import iconGit from "../../assets/images/skills/git.svg";
+import iconTeam from "../../assets/images/skills/teamwork.svg";
+import iconBEM from "../../assets/images/skills/bem.svg";
+import iconReact from "../../assets/images/skills/react.svg";
+import iconMUI from "../../assets/images/skills/material.svg";
+import iconWebflow from "../../assets/images/skills/webflow.svg";
+import iconWP from "../../assets/images/skills/wordpress.svg";
+import iconBootstrap from "../../assets/images/skills/bootstrap.svg";
+import iconJS from "../../assets/images/skills/js.svg";
+import iconMF from "../../assets/images/skills/mobile.svg";
+import iconPP from "../../assets/images/skills/pixel.svg";
+
 // import {Fade} from "react-reveal";
 
 const skils = [
     {
         title: "HTML5",
-        icon: icon1
+        icon: iconHtml
     },
     {
         title: "CSS3",
-        icon: ""
+        icon: iconCss
     },
     {
         title: "SASS",
-        icon: ""
+        icon: iconSaas
     },
     {
-        title: "CSS3",
-        icon: ""
+        title: "LESS",
+        icon: iconLess
     },
     {
         title: "GULP",
-        icon: ""
+        icon: iconGulp
     },
     {
         title: "GIT",
-        icon: ""
+        icon: iconGit
+    },
+    {
+        title: "Team work",
+        icon: iconTeam
+    },
+    {
+        title: "BEM",
+        icon: iconBEM
+    },
+    {
+        title: "Code to React",
+        icon: iconReact
+    },
+    {
+        title: "MUI",
+        icon: iconMUI
+    },
+    {
+        title: "Webflow",
+        icon: iconWebflow
+    },
+    {
+        title: "Wordpress",
+        icon: iconWP
+    },
+    {
+        title: "Bootstrap",
+        icon: iconBootstrap
+    },
+    {
+        title: "JS",
+        icon: iconJS
+    },
+    {
+        title: "Mobile first",
+        icon: iconMF
+    },
+    {
+        title: "Pixel Perfect",
+        icon: iconPP
     },
 ]
 

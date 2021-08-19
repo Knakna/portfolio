@@ -5,8 +5,8 @@ import s from './Project.module.scss';
 export const Project = ({project}) => {
     return (
         // <Fade cliar>
-            <div className={s.projectWrapper}>
-                <div className={s.project}>
+            <div className={s.project}>
+                <div className={s.inner}>
                     <div className={s.iconBox}>
                         <img className={s.icon} src={project.image} alt='icon'/>
                     </div>

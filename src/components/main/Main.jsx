@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Main.module.scss';
-import photo from '../../assets/images/photo/mainPhoto.jpg'
+import photo from '../../assets/images/header/burgerIcon.svg'
 
 export const Main = () => {
     return (

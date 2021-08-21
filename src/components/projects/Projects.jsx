@@ -17,77 +17,77 @@ import work12 from "../../assets/images/projects/work-12.jpg"
 
 const projects = [
     {
-        title: "Smoothie",
+        title: "Dream House",
         description: "",
         image: work1,
-        link: ""
+        link: "https://knakna.github.io/houseWP/"
 
     },
     {
         title: "Smoothie",
         description: "",
         image: work2,
-        link: ""
+        link: "https://knakna.github.io/Smoothie/"
     },
     {
-        title: "Smoothie",
+        title: "New Providence",
         description: "",
         image: work3,
-        link: ""
+        link: "https://knakna.github.io/NewProvidence"
     },
     {
-        title: "Smoothie",
+        title: "E-mail",
         description: "",
         image: work4,
-        link: ""
+        link: "https://knakna.github.io/e-mail/"
     },
     {
-        title: "Smoothie",
+        title: "Hely Fly",
         description: "",
         image: work5,
-        link: ""
+        link: "https://knakna.github.io/Helyfly/"
     },
     {
-        title: "Smoothie",
+        title: "Thrive Talk",
         description: "",
         image: work6,
-        link: ""
+        link: "https://knakna.github.io/ThriveTalk/"
     },
     {
-        title: "Smoothie",
+        title: "WP Intensive",
         description: "",
         image: work7,
-        link: ""
+        link: "https://knakna.github.io/wordpress/"
     },
     {
-        title: "Smoothie",
+        title: "Training Courses",
         description: "",
         image: work8,
-        link: ""
+        link: "https://knakna.github.io/openedu_courses/"
     },
     {
-        title: "Smoothie",
+        title: "Coffee factory",
         description: "",
         image: work9,
-        link: ""
+        link: "https://knakna.github.io/Coffee_webflow/\n"
     },
     {
-        title: "Smoothie",
+        title: "TestTask: Uni PRO",
         description: "",
         image: work10,
-        link: ""
+        link: "https://knakna.github.io/testTaskUniPRO/\n"
     },
     {
-        title: "Smoothie",
+        title: "Online Shop",
         description: "",
         image: work11,
         link: ""
     },
     {
-        title: "Smoothie",
+        title: "Card Training",
         description: "",
         image: work12,
-        link: ""
+        link: "https://fuza322.github.io/it-incubator-friday-project/"
     },
 
 ]

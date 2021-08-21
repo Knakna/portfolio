@@ -2,9 +2,6 @@
 @import "./src/assets/styles/variebles";
 
 
-.skillWrapper {
-  //background-color: $primaryBg;
-}
 
 .inner {
   @include flex(row, center, center);

@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import s from "./Header.module.scss"
 import {Link, animateScroll as scroll} from "react-scroll";
 
@@ -22,6 +22,13 @@ const headerItems = [
 ]
 
 export function Header() {
+
+    const [isShowMenu, setIsShowMenu] = useState(false);
+
+    const showHideMenu = () => {
+      setIsShowMenu(!isShowMenu)
+    }
+
     return (
         <header id={"mainId"} className={s.header}>
             <div className={s.container}>
@@ -36,7 +43,7 @@ export function Header() {
                         })}
                     </div>
 
-                    <div className={s.burger}>
+                    <div onClick={showHideMenu} className={s.burger}>
 
                     </div>
 

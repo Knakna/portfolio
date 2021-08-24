@@ -29,11 +29,13 @@ export function Header() {
       setIsShowMenu(!isShowMenu)
     }
 
+    const menuClass = isShowMenu ? s.nav + " " + s.menuActive : s.nav
+    const burgerButtonClass = isShowMenu ? s.burger + " " + s.burgerActiveMenuButton : s.burger
     return (
         <header id={"mainId"} className={s.header}>
             <div className={s.container}>
                 <div className={s.inner}>
-                    <div className={s.nav}>
+                    <div className={menuClass}>
                         {headerItems.map((item, index) => {
                             return (
                                 <Link key={index} activeClass="active" to={item.path} spy={true} smooth={true}
@@ -43,7 +45,7 @@ export function Header() {
                         })}
                     </div>
 
-                    <div onClick={showHideMenu} className={s.burger}>
+                    <div onClick={showHideMenu} className={burgerButtonClass}>
 
                     </div>
 

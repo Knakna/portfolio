@@ -27,13 +27,36 @@
 
   width: 45%;
 
+  transition: 1s;
+
   @include media(xl) {
     width: 100%;
   }
 
   @include media(xs) {
-    display: none;
+
+    @include flex(column, center, space-evenly);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+
+    z-index: 20;
+
+    transform: translateY(-100%);
+    background-color: $primaryDark;
   }
+
+  &.menuActive {
+    @include media(xs) {
+      transform: translateY(0%);
+      @include flex(column, center, space-evenly);
+
+    }
+  }
+
 }
 
 .link {
@@ -49,6 +72,10 @@
 
   @include media(xl) {
     font-size: 24px;
+  }
+
+  @include media(xs) {
+    font-size: 36px;
   }
 }
 
@@ -85,6 +112,8 @@
   display: none;
 
   position: fixed;
+  top: 30px;
+  right: 30px;
 
   width: 50px;
   height: 50px;
@@ -98,32 +127,19 @@
   transition: all .3s linear;
   z-index: 25;
 
-  @include media(lg) {
-    display: block;
-
-    width: 40px;
-    height: 30px;
-
-    left: 20px;
-    top: 30px;
+  @include media(xs) {
+    @include flex();
   }
 
-  @include media(sm) {
-    left: 2.3rem;
-    top: 5.5rem;
-  }
-
-
-
-  &:hover .burger__line,
-  &:hover .burger__line::after,
-  &:hover .burger__line::before,
-  &:hover .burger__line.active::before,
-  &:hover .burger__line.active::after {
+  &:hover .burgerLine,
+  &:hover .burgerLine::after,
+  &:hover .burgerLine::before,
+  &:hover .burgerLine.active::before,
+  &:hover .burgerLine.active::after {
     background-color: $primaryLight;
   }
 
-  &__line {
+  .burgerLine {
     @include burgerLine();
 
     &::before {
@@ -131,7 +147,7 @@
 
       content: "";
       position: absolute;
-      top: 10px;
+      top: 12px;
       right: 0;
     }
 
@@ -140,31 +156,100 @@
 
       content: "";
       position: absolute;
-      bottom: 10px;
+      bottom: 12px;
       right: 0;
     }
-
-    &.active {
-      display: block;
-      position: relative;
-
-      padding: 0;
-
-      height: 0;
-
-      border: 0;
-      transition: all .3s linear;
-      z-index: 25;
-
-      &::after {
-        @include burgerCross();
-        transform: rotate(-45deg);
-      }
-
-      &::before {
-        @include burgerCross();
-        transform: rotate(45deg);
-      }
-    }
   }
+}
+
+.burgerCross {
+  display: block;
+  position: relative;
+
+  padding: 0;
+
+  height: 0;
+
+  border: 0;
+  transition: all .3s linear;
+  z-index: 25;
+
+  &::after {
+    @include burgerCross();
+    transform: rotate(-45deg);
+  }
+
+  &::before {
+    @include burgerCross();
+    transform: rotate(45deg);
+  }
+}
+
+.burgerMenuWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+
+  cursor: pointer;
+}
+
+.burgerMenuIcon {
+  position: relative;
+
+  width: 50px;
+  height: 6px;
+
+  background-color: #ffffff;
+  transition: background-color linear 0.4s;
+}
+
+.burgerMenuIcon::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+
+  width: 50px;
+  height: 6px;
+
+  background-color: #ffffff;
+
+  transition: transform 0.2s linear, bottom 0.2s linear 0.2s;
+}
+
+.burgerMenuIcon::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+
+  width: 50px;
+  height: 6px;
+
+  background-color: #ffffff;
+
+  transition: transform 0.2s linear, bottom 0.2s linear 0.2s;
+}
+
+.burgerMenuIcon.active {
+  background-color: transparent;
+}
+
+.burgerMenuIcon.active::before {
+  bottom: 0;
+
+  transform: rotate(45deg);
+
+  transition: bottom 0.2s linear, transform 0.2s linear 0.2s;
+}
+
+.burgerMenuIcon.active::after {
+  bottom: 0;
+
+  transform: rotate(-45deg);
+
+  transition: bottom 0.2s linear, transform 0.2s linear 0.2s;
 }

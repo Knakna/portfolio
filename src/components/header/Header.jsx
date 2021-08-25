@@ -30,7 +30,7 @@ export function Header() {
     }
 
     const menuClass = isShowMenu ? s.nav + " " + s.menuActive : s.nav
-    const burgerButtonClass = isShowMenu ? s.burger + " " + s.burgerActiveMenuButton : s.burger
+    const burgerButtonClass =   isShowMenu   ? s.burgerMenuIcon + ' ' + s.active : s.burgerMenuIcon;
     return (
         <header id={"mainId"} className={s.header}>
             <div className={s.container}>
@@ -45,8 +45,8 @@ export function Header() {
                         })}
                     </div>
 
-                    <div onClick={showHideMenu} className={burgerButtonClass}>
-
+                    <div onClick={showHideMenu} className={s.burgerMenuWrapper}>
+                        <div className={burgerButtonClass}> </div>
                     </div>
 
                 </div>

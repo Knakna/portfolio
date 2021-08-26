@@ -40,12 +40,13 @@
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 50%;
+    bottom: 0;
     left: 0;
 
     z-index: 20;
 
     transform: translateY(-100%);
+
     background-color: $primaryDark;
   }
 
@@ -53,10 +54,8 @@
     @include media(xs) {
       transform: translateY(0%);
       @include flex(column, center, space-evenly);
-
     }
   }
-
 }
 
 .link {
@@ -64,11 +63,8 @@
   font-weight: 700;
   color: #fff;
   cursor: pointer;
-  transition: .3s;
 
-  &:hover {
-    color: $primaryLight;
-  }
+  transition: .3s linear;
 
   @include media(xl) {
     font-size: 24px;
@@ -77,123 +73,29 @@
   @include media(xs) {
     font-size: 36px;
   }
-}
 
-.burger {
-  display: none;
-  //
-  //width: 50px;
-  //height: 50px;
-  //
-  //background-image: url(./../../assets/images/header/burgerIcon.svg);
-  //fill: $primaryLight;
-
-  @include media(xs) {
-    display: block;
-  }
-}
-
-.menuActive {
-
-  @include media(xs) {
-    @include flex(column, center, center);
-  }
-}
-
-.burgerActiveMenuButton {
-  width: 50px;
-  height: 50px;
-
-  background-image: url(./../../assets/images/header/crossIcon.svg);
-}
-
-
-.burger {
-  display: none;
-
-  position: fixed;
-  top: 30px;
-  right: 30px;
-
-  width: 50px;
-  height: 50px;
-
-  padding: 0;
-
-  background: transparent;
-  border: 0;
-  outline: 1px solid transparent;
-  cursor: pointer;
-  transition: all .3s linear;
-  z-index: 25;
-
-  @include media(xs) {
-    @include flex();
-  }
-
-  &:hover .burgerLine,
-  &:hover .burgerLine::after,
-  &:hover .burgerLine::before,
-  &:hover .burgerLine.active::before,
-  &:hover .burgerLine.active::after {
-    background-color: $primaryLight;
-  }
-
-  .burgerLine {
-    @include burgerLine();
-
-    &::before {
-      @include burgerLine();
-
-      content: "";
-      position: absolute;
-      top: 12px;
-      right: 0;
-    }
-
-    &::after {
-      @include burgerLine();
-
-      content: "";
-      position: absolute;
-      bottom: 12px;
-      right: 0;
-    }
-  }
-}
-
-.burgerCross {
-  display: block;
-  position: relative;
-
-  padding: 0;
-
-  height: 0;
-
-  border: 0;
-  transition: all .3s linear;
-  z-index: 25;
-
-  &::after {
-    @include burgerCross();
-    transform: rotate(-45deg);
-  }
-
-  &::before {
-    @include burgerCross();
-    transform: rotate(45deg);
+  &:hover {
+    color: $primaryLight;
   }
 }
 
 .burgerMenuWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
+
   width: 50px;
   height: 50px;
 
-
   cursor: pointer;
+
+  @include media(xs) {
+    @include flex(row, center, center);
+  }
+
+  &:hover .burgerMenuIcon,
+  &:hover .burgerMenuIcon:before,
+  &:hover .burgerMenuIcon:after {
+    background-color: $primaryLight;
+  }
 }
 
 .burgerMenuIcon {
@@ -202,54 +104,39 @@
   width: 50px;
   height: 6px;
 
-  background-color: #ffffff;
-  transition: background-color linear 0.4s;
+  background-color: #fff;
+
+  transition: .3s;
+
+  z-index: 100;
 }
 
 .burgerMenuIcon::before {
-  content: "";
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-
-  width: 50px;
-  height: 6px;
-
-  background-color: #ffffff;
-
-  transition: transform 0.2s linear, bottom 0.2s linear 0.2s;
+  @extend %burgerLine;
 }
 
 .burgerMenuIcon::after {
-  content: "";
-  position: absolute;
+  @extend %burgerLine;
+
   bottom: -15px;
-  left: 0;
-
-  width: 50px;
-  height: 6px;
-
-  background-color: #ffffff;
-
-  transition: transform 0.2s linear, bottom 0.2s linear 0.2s;
 }
 
 .burgerMenuIcon.active {
   background-color: transparent;
+
+  transition: .3s;
+
+  &:hover {
+    background-color: transparent;
+  }
 }
 
 .burgerMenuIcon.active::before {
-  bottom: 0;
-
-  transform: rotate(45deg);
-
-  transition: bottom 0.2s linear, transform 0.2s linear 0.2s;
+  @extend %burgerLineActive;
 }
 
 .burgerMenuIcon.active::after {
-  bottom: 0;
+  @extend %burgerLineActive;
 
   transform: rotate(-45deg);
-
-  transition: bottom 0.2s linear, transform 0.2s linear 0.2s;
 }

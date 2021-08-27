@@ -4,12 +4,23 @@
 .header {
   padding: 20px 0;
 
+  height: 50px;
+
   background-color: $primaryDark;
 
   @include media(xl) {
     padding: 10px 0;
-
   }
+
+  @include media(xs) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+  }
+
 }
 
 .container {

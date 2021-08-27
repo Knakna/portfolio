@@ -3,7 +3,7 @@
 
 .projects {
   padding: 80px 0;
-  background-color: $primaryBg;
+  background-color: $primaryDark;
 }
 
 
@@ -21,7 +21,8 @@
 
 .inner > div {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  //grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-items: center;
   row-gap: 100px;
   //column-gap: 70px;

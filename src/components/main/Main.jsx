@@ -10,7 +10,7 @@ export const Main = () => {
                     <div className={s.inner}>
                         <div className={s.content}>
                             <span className={s.greeting}>Hi! My name is</span>
-                            {/*<h1 className={s.name}>Natallia Kulikova</h1>*/}
+                            <h1 className={s.name}>Natallia Kulikova</h1>
 
                             <span className={s.career}>I am HTML/CSS developer</span>
                         </div>

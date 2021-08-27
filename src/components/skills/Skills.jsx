@@ -10,11 +10,7 @@ import iconGit from "../../assets/images/skills/git.svg";
 import iconTeam from "../../assets/images/skills/teamwork.svg";
 import iconBEM from "../../assets/images/skills/bem.svg";
 import iconReact from "../../assets/images/skills/react.svg";
-import iconMUI from "../../assets/images/skills/material.svg";
-import iconWebflow from "../../assets/images/skills/webflow.svg";
-import iconWP from "../../assets/images/skills/wordpress.svg";
-import iconBootstrap from "../../assets/images/skills/bootstrap.svg";
-import iconJS from "../../assets/images/skills/js.svg";
+
 import iconMF from "../../assets/images/skills/mobile.svg";
 import iconPP from "../../assets/images/skills/pixel.svg";
 
@@ -57,26 +53,7 @@ const skils = [
         title: "Code to React",
         icon: iconReact
     },
-    {
-        title: "MUI",
-        icon: iconMUI
-    },
-    {
-        title: "Webflow",
-        icon: iconWebflow
-    },
-    {
-        title: "Wordpress",
-        icon: iconWP
-    },
-    {
-        title: "Bootstrap",
-        icon: iconBootstrap
-    },
-    {
-        title: "JS",
-        icon: iconJS
-    },
+
     {
         title: "Mobile first",
         icon: iconMF
